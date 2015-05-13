@@ -3,6 +3,7 @@ use App\Http\Requests\ContactFormRequest;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\models\Photo;
+use App\models\Image;
 use Input;
 use Eloquent; // ******** This Line *********
 use DB;
@@ -17,7 +18,8 @@ class PageController extends Controller {
 	 */
 	public function index()
 	{
-		//
+		$images = Image::all()->take(3);
+		return view('pages.index', ['images'=>$images]);
 	}
 
 	public function create()

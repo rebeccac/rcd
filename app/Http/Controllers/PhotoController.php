@@ -78,7 +78,7 @@ class PhotoController extends Controller {
 		$input = array_except(Input::all(), '_method');
 		$photo->update($input);
 
-		return redirect('admin/select');
+		return redirect('admin/select')->with('message', $photo->title.' has been updated');
 	}
 
 
@@ -94,7 +94,7 @@ class PhotoController extends Controller {
 		File::delete("images/".$photo->url); // delete file from images dir
 		$photo->delete(); // delete record from DB
 
-		return redirect('admin/select');
+		return redirect('admin/select')->with('message', 'Photo deleted');
 	}
 
 

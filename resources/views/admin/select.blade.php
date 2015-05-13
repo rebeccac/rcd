@@ -4,6 +4,10 @@
 <div class="content">
     <h2>Edit or delete an image</h2>
 
+    @if(Session::has('message'))
+        <p class="alert alert-info">{{ Session::get('message') }}</p>
+    @endif
+    
     <div class="row">
         <div class="col-md-10 col-md-offset-1">
             <ul>

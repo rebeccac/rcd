@@ -39,6 +39,15 @@ h2, h3 {
 .row {
   margin: 0 !important;
 }
+
+.alert {
+    padding: 10px;
+}
+.alert-info {
+    background-color: rgba(135,175,181, 0.3);
+    border-color: rgba(135,175,181, 0.9);
+    color: $dark_grey;
+}
 /* ****************************** */
 
 /* ********** Layout ********** */
