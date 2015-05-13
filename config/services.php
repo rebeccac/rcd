@@ -20,7 +20,7 @@ return [
 	],
 
 	'mandrill' => [
-		'secret' => '',
+		'secret' => 'ZKf0xfar1Gqbi2x6byxkiw',
 	],
 
 	'ses' => [
@@ -30,8 +30,7 @@ return [
 	],
 
 	'stripe' => [
-		'model'  => 'App\User',
-		'key' => '',
+		'model'  => 'User',
 		'secret' => '',
 	],
 

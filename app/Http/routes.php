@@ -11,13 +11,21 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+// Route::get('/', 'WelcomeController@index');
 
-Route::get('home', 'HomeController@index');
+// Route::get('home', 'HomeController@index');
+Route::get('/', 'PageController@index');
+Route::get('about', 'PageController@showAbout');
+Route::get('gallery', 'PageController@showGallery');
+Route::get('contact', 'PageController@create');
+
+// Post back to /contact after submitting form
+Route::post('contact',
+  ['as' => 'contact_store', 'uses' => 'PageController@store']);
+
+
 
 Route::resource('photos', 'PhotoController');
-Route::get('gallery', 'PhotoController@index');
-
 
 // Routes requiring authentication
 Route::group(['middleware' => 'auth'], function()
@@ -26,6 +34,11 @@ Route::group(['middleware' => 'auth'], function()
     	'as' => 'photos/{id}edit', 'uses' => 'PhotoController@edit'
 		]);
 	Route::get('admin', 'AdminController@index');
+	Route::get('admin/upload', function() {
+    	return View::make('admin.upload');
+	});
+	// Post back to /admin/upload after submitting an image for upload
+	Route::post('admin/upload', 'AdminController@upload');
 	Route::get('admin/select', 'AdminController@showSelect');
 	Route::delete('admin/destroy', 'AdminController@destroy');
 });

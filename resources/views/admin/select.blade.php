@@ -15,7 +15,7 @@
 
                             {!! Form::open(['method' => 'DELETE', 'route' => ['photos.destroy', $photo->id], 'class'=>'delete-record']) !!}
 
-                            <button type="button" class="icon-button delete-button">
+                            <button type="submit" class="icon-button delete-button" onclick="if(!confirm('Are you sure you want to delete this item?')){return false;};">
                                 <span class="glyphicon glyphicon-trash"></span>
                             </button>
                             {!! Form::close() !!}

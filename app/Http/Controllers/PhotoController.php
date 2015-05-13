@@ -6,6 +6,7 @@ use App\models\Photo;
 use Input;
 use Eloquent; // ******** This Line *********
 use DB;
+use File;
 use Illuminate\Http\Request;
 
 class PhotoController extends Controller {
@@ -90,7 +91,8 @@ class PhotoController extends Controller {
 	public function destroy($id)
 	{
 		$photo = Photo::find($id);
-		$photo->delete();
+		File::delete("images/".$photo->url); // delete file from images dir
+		$photo->delete(); // delete record from DB
 
 		return redirect('admin/select');
 	}
