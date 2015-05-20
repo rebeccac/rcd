@@ -9,6 +9,9 @@ use DB;
 		'url',
 		'title',
 		'alt',
-		'description'
+		'description',
+        'width',
+        'height',
+        'type'
 	];
     }

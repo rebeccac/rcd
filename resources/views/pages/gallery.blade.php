@@ -58,10 +58,10 @@
                             </div>
 
                             <div class="rc-overlay-box">
-                                <div class="load">
+                                <!-- <div class="load">
                                     <span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
 
-                                </div>
+                                </div> -->
 
                                 <img src="{{asset('images/'.$image->url)}}" alt="$image->alt">
                                 <div class="rc-details">

@@ -3,5 +3,8 @@
 .env
 
 .DS_Store
+notes.txt
+routes.php
+.htaccess
 config/database.php
 config/services.php
