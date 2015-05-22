@@ -5,6 +5,17 @@ $med_grey: #828282;
 $dark_grey: #333333;
 
 $trans_off_white: rgba(242,242,235,0.7);
+
+
+@mixin gradient {
+  @for $i from 1 through 7 {
+    &:nth-child(#{$i}) {
+      background-color: darken($slate, $i * 4%);
+    }
+  }
+}
+
+
 * {
 margin: 0;
 padding: 0;
@@ -101,8 +112,30 @@ header.header {
     content: '';
     margin: 0;
     padding: 0;
+
+    .heading {
+        display: table-row;
+    }
+
+    .row .bottom-align {
+        display: table-cell;
+        vertical-align: bottom;
+        float: none;
+    }
+    h1.title {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1.3em;
+        padding: 0;
+        margin: 0 0 0 20px;
+
+        a:link, a:hover, a:active, a:visited {
+            color: $med_grey;
+            text-decoration: none;
+        }
+    }
+
     .logo-img {
-        margin: 20px 0 10px 30px;
+        margin: 20px 0 10px 20px;
     }
     h2.logo {
         font-family: 'Marcellus', serif;
@@ -111,17 +144,7 @@ header.header {
         margin: 0 0 5px 30px;
         padding: 0;
     }
-    h1.title {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 1.4em;
-        padding: 0;
-        margin: 0 0 0 30px;
 
-        a:link, a:hover, a:active, a:visited {
-            color: $med_grey;
-            text-decoration: none;
-        }
-    }
     ul.s-m-i {
         display: inline-block;
         float: right;
@@ -142,6 +165,68 @@ header.header {
             }
         }
     }
+    /* dropdown menu for phones */
+    nav.mobile {
+        width: 100%;
+        height: 40px;
+        background-color: #f2f2f2;
+        .col-xs-12 {
+            margin: 0;
+            padding: 0;
+        }
+        ul.mobile-menu {
+            width: 100%;
+            list-style: none;
+            height: 100%;
+            li {
+                line-height: 40px;
+                color: #333;
+                margin: 0;
+                a#dropdown-link:link,
+                a#dropdown-link:hover,
+                a#dropdown-link:active,
+                a#dropdown-link:visited {
+                    color: #555;
+                    text-decoration: none;
+                    padding-left: 20px;
+                    i {
+                        font-size: 1.3em;
+                        color: #555;
+                    }
+                    span {
+                        font-size: 1.3em;
+                        margin-left: 5px;
+                    }
+                }
+
+                ul.drop {
+                    list-style: none;
+                    display: none;
+                    width: 100%;
+                    position: absolute;
+                    z-index: 1000;
+                    margin: -1px;
+                    li {
+                        color: #f2f2f2;
+                        @include gradient;
+                        padding-left: 30px;
+                        height: 30px;
+                        line-height: 30px;
+                        border-bottom: 1px solid #bbb;
+                        a:link, a:hover, a:active, a:visited {
+                            color: #f2f2f2;
+                            text-decoration: none;
+                        }
+                    }
+                    li:hover {
+                        background-color: $slate;
+                    }
+                }
+            }
+        }
+    }
+    /* end of dropdown menu for phones */
+
     nav.nav {
         width: 100%;
         height: 40px;
@@ -176,6 +261,7 @@ header.header {
             }
         }
     }
+
 }
 
 /* **************************** */
