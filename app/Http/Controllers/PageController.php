@@ -18,7 +18,7 @@ class PageController extends Controller {
 	 */
 	public function index()
 	{
-		$images = Image::all()->take(3);
+		$images = Image::all()->take(4);
 		return view('pages.index', ['images'=>$images]);
 	}
 

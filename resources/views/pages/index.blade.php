@@ -2,13 +2,32 @@
 <?php $page = 'index'; ?>
 @section('content')
 <div class="content">
-	<div class="row images">
-		<div class="col-md-10 col-md-offset-1">
-			@foreach($images as $image)
-				<div class="col-md-4">
-						<img src="{{asset('images/'.$image->url)}}" alt="{{$image->alt}}" width="350" class="frontpage-image">
+	<div class="frontpage-gallery visible-xs-block">
+		<div class="row images">
+			<div class="col-xs-12">
+				<div class="row row-no-padding">
+					@for ($i = 0; $i < 4; $i++)
+						<div class="col-xs-6">
+							<img src="{{asset('images/'.$images[$i]->url)}}" alt="{{$images[$i]->alt}}" width="100%" class="frontpage-image">
+						</div>
+					@endfor
 				</div>
-			@endforeach
+			</div>
+		</div>
+	</div>
+	
+	<div class="frontpage-gallery hidden-xs">
+
+			<div class="col-sm-12">
+				<div class="row row-no-padding">
+
+					@for($i = 0; $i < 3; $i++)
+						<div class="col-sm-4">
+							<img src="{{asset('images/'.$images[$i]->url)}}" alt="{{$images[$i]->alt}}" width="100%" class="frontpage-image">
+						</div>
+					@endfor
+				</div>
+			</div>
 		</div>
 	</div>
 </div><!-- content -->

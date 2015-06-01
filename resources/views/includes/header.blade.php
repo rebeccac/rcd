@@ -19,7 +19,7 @@
                 <ul class="mobile-menu">
                     <li>
                         <a href="#" id="dropdown-link"><i class="fa fa-bars"></i> <span>Menu</span></a>
-                        <ul class="s-m-i">
+                        <ul class="s-m-i s-m-i-xs">
                             <li><a href="http://www.twitter.com/rjcordingley" target="_blank"><i class="fa fa-twitter"></i></a></li>
                             <li><a href="http://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a></li>
                             <li><a href="https://www.pinterest.com/beccordingley/" target="_blank"><i class="fa fa-pinterest"></i></a></li>

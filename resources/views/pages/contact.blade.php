@@ -8,7 +8,7 @@
     @if(Session::has('message'))
         <p class="alert alert-info">{{ Session::get('message') }}</p>
     @endif
-    
+
     <p><em>Please don't hestitate to contact me with any questions, comments or requests.</em></p>
     <ul>
         @foreach($errors->all() as $error)
@@ -16,7 +16,7 @@
         @endforeach
     </ul>
     <div class="row">
-        <div class="col-md-9">
+        <div class=" col-xs-12 col-md-9">
             <div class="box">
             {!! Form::open(array('route' => 'contact_store', 'class' => 'form')) !!}
 
@@ -51,24 +51,24 @@
             {!! Form::close() !!}
         </div>
         </div><!-- col-md-9 -->
-        <div class="col-md-3">
-            <div class="contact-icon">
-                <i class="fa fa-twitter"></i> Follow me on Twitter
+        <div class=" col-xs-12 col-md-3">
+            <div class="contact-icon col-xs-4 col-md-12 text-center-xs text-left-md">
+                <i class="fa fa-twitter"></i> <div class="hidden-xs inline-block">Twitter</div>
             </div>
-            <div class="contact-icon">
-                <i class="fa fa-facebook"></i> Like me on Facebook
+            <div class="contact-icon col-xs-4 col-md-12 text-center-xs text-left-md">
+                <i class="fa fa-facebook"></i> <div class="hidden-xs inline-block">Facebook</div>
             </div>
-            <div class="contact-icon">
-                <img src="{{asset('images/etsy-icon-grey.png')}}" alt="Etsy icon" width="32px"> Follow me on Etsy
+            <div class="contact-icon col-xs-4 col-md-12 text-center-xs text-left-md">
+                <img src="{{asset('images/etsy-icon-grey.png')}}" alt="Etsy icon" width="32px"> <div class="hidden-xs inline-block">Etsy</div>
             </div>
-            <div class="contact-icon">
-                <i class="fa fa-instagram"></i> Follow me on Instagram
+            <div class="contact-icon col-xs-4 col-md-12 text-center-xs text-left-md">
+                <i class="fa fa-instagram"></i> <div class="hidden-xs inline-block">Instagram</div>
             </div>
-            <div class="contact-icon">
-                <i class="fa fa-pinterest"></i> Follow me on Pinterest
+            <div class="contact-icon col-xs-4 col-md-12 text-center-xs text-left-md">
+                <i class="fa fa-pinterest"></i> <div class="hidden-xs inline-block">Pinterest</div>
             </div>
 
-        </div><!-- col-md-3 -->
+        </div><!-- col-xs-12 col-md-3 -->
     </div><!-- row -->
 </div><!-- content -->
 

@@ -19,12 +19,18 @@ html, body {
 .clear {
   clear: both; }
 
+.inline-block {
+  display: inline-block; }
+
 h2, h3 {
   font-family: 'Open Sans', sans-serif; }
 
 .red {
   color: #ff0000; }
 
+@media (min-width: 992px) and (max-width: 1199px) {
+  .text-left-md {
+    text-align: left; } }
 /* ********** Overrides ********** */
 .row {
   margin: 0 !important; }
@@ -69,6 +75,10 @@ h2, h3 {
   font-size: 0.8em;
   text-align: center;
   line-height: 35px; }
+
+.row-no-padding [class*="col-"] {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
 
 /* **************************** */
 /* ********** Header ********** */
@@ -118,6 +128,10 @@ header.header {
         font-size: 1.7em; }
         header.header ul.s-m-i li i:hover {
           color: #87afb5; }
+  header.header ul.s-m-i-xs {
+    height: 40px; }
+    header.header ul.s-m-i-xs li i {
+      line-height: 40px; }
   header.header nav.mobile {
     width: 100%;
     height: 40px;
@@ -182,6 +196,8 @@ header.header {
             header.header nav.mobile ul.mobile-menu li ul.drop li a:link, header.header nav.mobile ul.mobile-menu li ul.drop li a:hover, header.header nav.mobile ul.mobile-menu li ul.drop li a:active, header.header nav.mobile ul.mobile-menu li ul.drop li a:visited {
               color: #f2f2f2;
               text-decoration: none; }
+          header.header nav.mobile ul.mobile-menu li ul.drop li:last-child {
+            border-bottom: 0; }
           header.header nav.mobile ul.mobile-menu li ul.drop li:hover {
             background-color: #87afb5; }
   header.header nav.nav {
@@ -214,6 +230,9 @@ header.header {
 .images {
   position: relative;
   top: 30px; }
+
+.frontpage-image {
+  padding: 5px; }
 
 /* ******************************* */
 /* ********** Contact Page ********** */
@@ -266,7 +285,7 @@ form {
   .contact-icon i.instagram-blue {
     color: #32506d; }
 .contact-icon i, .contact-icon img {
-  margin: 15px;
+  margin: 10px;
   width: 32px; }
 
 /* ********************************** */
