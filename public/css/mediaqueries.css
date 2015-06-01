@@ -1,22 +1,35 @@
-/* Small Devices, Tablets */
-@media only screen and (min-width: 768px) {
+/* Custom, iPhone Retina */
+@media only screen and (min-width: 320px) {
+  /* ********** Gallery ********** */
+  .rc-album li {
+    width: 50%; } }
+/* Extra Small Devices, Phones */
+@media only screen and (min-width: 480px) {
+  .text-center-xs {
+    text-align: center; }
+
   header.header .heading {
     display: block; }
   header.header .row .bottom-align {
     display: block;
     vertical-align: none;
     float: none; } }
-/*==========  Mobile First Method  ==========*/
-/* Custom, iPhone Retina */
-/* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px) {
-  .text-center-xs {
-    text-align: center; } }
 /* Small Devices, Tablets */
+@media only screen and (min-width: 768px) {
+  /* ********** Gallery ********** */
+  .rc-album li {
+    width: 33%; } }
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
   .text-left-md {
-    text-align: left; } }
+    text-align: left; }
+
+  /* ********** Gallery ********** */
+  .rc-album li {
+    width: 25%; } }
 /* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {
+  .rc-album {
+    max-width: 1000px; } }
 
 /*# sourceMappingURL=mediaqueries.css.map */

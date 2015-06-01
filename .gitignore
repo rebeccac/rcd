@@ -8,3 +8,4 @@ routes.php
 .htaccess
 config/database.php
 config/services.php
+resources/views/pages/gallery2.blade.php
