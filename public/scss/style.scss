@@ -379,7 +379,6 @@ form {
 
 /* ********** Gallery ********** */
 
-
 .rc-album{
 	width: 100%;
 	margin: 0 auto;
@@ -423,13 +422,13 @@ form {
 }
 
 .rc-overlay{
-	width: 0px;
-	height: 0px;
+	width: 0;
+	height: 0;
 	position: fixed;
-	overflow: hidden;
-	left: 0px;
-	top: 0px;
-	padding: 0px;
+	overflow: scroll;
+	left: 0;
+	top: 0;
+	padding: 0;
 	z-index: 99;
 	text-align: center;
     background-color: rgba(10,10,10,0.95);
@@ -444,7 +443,8 @@ form {
 }
 
 .rc-overlay .rc-overlay-box {
-    width: 540px;
+    min-width: 300px;
+    max-width: 540px;
     padding: 20px;
     height: auto;
     margin: 0 auto;
@@ -455,9 +455,9 @@ form {
 .rc-overlay .rc-overlay-box .rc-details{
 	position: relative;
     color: $trans_off_white;
-	width: 500px;
     padding: 0;
-    margin: 0 auto;
+    margin: 30px auto;
+    height: auto;
 }
 .rc-overlay .rc-overlay-box .rc-details h3.title{
     text-align: center;
@@ -474,20 +474,20 @@ form {
     font-size: 1em;
     color: $trans_off_white;
     text-align: center;
+    padding: 0;
 }
 .rc-overlay .rc-overlay-box .rc-details p{
     font-size: 0.95em;
 	text-align: left;
 	float: left;
-	width: 300px;
 }
 
 .rc-overlay .rc-overlay-top a.rc-close span {
     z-index: 1001;
     position: relative;
-    top: 10px;
+    top: -30px;
     right: 0;
-    float: right;
+    /* float: right; */
     font-size: 2em;
     line-height: 20px;
     text-align: center;
@@ -502,72 +502,33 @@ form {
 .rc-overlay .rc-overlay-box img{
 	position: relative;
 	opacity: 0;
-    width: 500px;
-    height: 500px;
+    width: 100%;
 	box-shadow: 0px 2px 7px rgba(0,0,0,0.2);
 	transition: opacity 0.5s linear;
 }
 
-
-.rc-overlay .rc-overlay-top .rc-nav{
+.rc-overlay-box .rc-details .rc-nav {
     color: #333;
-	width: 100%;
-	margin: 10px auto 0px auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
-.rc-overlay .rc-overlay-top .rc-nav .prev,
-.rc-overlay .rc-overlay-top .rc-nav .next {
+.rc-overlay-box .rc-details .rc-nav .prev {
+    float: left;
+    width: 50%;
+}
+.rc-overlay-box .rc-details .rc-nav .next {
+    float: right;
+    width: 50%;
 }
 
-
-.rc-overlay .rc-overlay-top .rc-nav .prev .rc-prev,
-.rc-overlay .rc-overlay-top .rc-nav .next .rc-next{
-    position: absolute;
-    top: 50% !important;
+.rc-overlay-box .rc-details .rc-nav .prev .rc-prev,
+.rc-overlay-box .rc-details .rc-nav .next .rc-next {
     &:link, &:hover, &:active, &:visited {
         text-decoration: none;
         color: $trans_off_white;
-        /* color: red; */
-        font-size: 4.5em;
+        font-size: 2.5em;
     }
-}
-.rc-overlay .rc-overlay-top .rc-nav .prev .rc-prev {
-    left: 20px;
-    text-align: left;
-}
-.rc-overlay .rc-overlay-top .rc-nav .rc-next {
-    right: 20px;
-    text-align: right;
-}
-
-
-.rc-overlay .rc-overlay-top .title .rc-prev, .rc-next{
-	position: absolute;
-	height: 25px;
-	opacity: 0.8;
-    color: $trans_off_white;
-    font-size: 1em;
-}
-.rc-overlay .rc-overlay-top .title .rc-prev {
-    left: 0;
-
-}
-.rc-overlay .rc-overlay-top .title .rc-next {
-    right: 0;
-
-}
-
-
-.rc-overlay-box .title .rc-prev:hover, .rc-next:hover{
-	opacity: top;
-}
-.rc-overlay-top .title .rc-prev{
-	margin-left: -30px;
-	background: transparent url(../images/arrows.png) no-repeat top left;
-}
-.rc-overlay-top .title .rc-next{
-	margin-left: 6px;
-	background: transparent url(../images/arrows.png) no-repeat top right;
 }
 
 .rc-overlay:target {

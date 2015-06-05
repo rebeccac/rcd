@@ -26,36 +26,11 @@
                                 <span>{{$image->title}}</span>
                             </a>
                             <div class="rc-overlay" id=<?php echo "image-".$i ?>>
-                                <div class="rc-overlay-top">
-                                    <a href="#page" class="rc-close">
-                                        <span class="glyphicon glyphicon-remove"></span>
-                                    </a>
-                                    <div class="rc-nav">
-                                        <div class="prev">
-                                            <a href=<?php
-                                            if ($i == 0) {
-                                                echo "#image-".($count - 1);
-                                            }
-                                            else {
-                                                echo "#image-".($i - 1);
-                                            } ?>
-                                            class="rc-prev">&larr;</a>
-                                        </div>
-                                        <div class="next">
-                                            <a href=<?php
-                                            if ($i == $count - 1) {
-                                                echo "#image-0";
-                                            }
-                                            else {
-                                                echo "#image-".($i + 1);
-                                            } ?>
-                                            class="rc-next">&rarr;</a>
-                                        </div>
-                                    </div>
-
-
-
-                                </div>
+                                <div class="row">
+                                    <div class="rc-overlay-top">
+                                        <a href="#page" class="rc-close">
+                                            <span class="glyphicon glyphicon-remove"></span>
+                                        </a>
 
                                 <div class="rc-overlay-box">
 
@@ -63,8 +38,34 @@
                                     <div class="rc-details">
                                         <h3 class="title">{{$image->title}}</h3>
                                         <span class="gallery-description">{{$image->description}}</span>
+
+                                        <div class="rc-nav">
+                                            <div class="prev">
+                                                <a href=<?php
+                                                if ($i == 0) {
+                                                    echo "#image-".($count - 1);
+                                                }
+                                                else {
+                                                    echo "#image-".($i - 1);
+                                                } ?>
+                                                class="rc-prev">&larr;</a>
+                                            </div>
+
+                                            <div class="next">
+                                                <a href=<?php
+                                                if ($i == $count - 1) {
+                                                    echo "#image-0";
+                                                }
+                                                else {
+                                                    echo "#image-".($i + 1);
+                                                } ?>
+                                                class="rc-next">&rarr;</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
+                            </div><!-- cols -->
+                            </div><!-- row -->
                             </div>
                         </li>
                         <?php $i++; ?>

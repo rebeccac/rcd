@@ -2,7 +2,38 @@
 @media only screen and (min-width: 320px) {
   /* ********** Gallery ********** */
   .rc-album li {
-    width: 50%; } }
+    width: 50%; }
+
+  .rc-overlay .rc-overlay-box {
+    min-width: 280px;
+    max-width: 540px;
+    height: auto;
+    margin: 0 auto;
+    background-color: rgba(51, 51, 51, 0.7);
+    position: absolute;
+    left: 0; }
+
+  .rc-overlay .rc-overlay-top a.rc-close span {
+    z-index: 1001;
+    position: absolute;
+    top: 20px;
+    float: right;
+    font-size: 2em;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(242, 242, 235, 0.7);
+    border: 0; }
+    .rc-overlay .rc-overlay-top a.rc-close span:link, .rc-overlay .rc-overlay-top a.rc-close span:hover, .rc-overlay .rc-overlay-top a.rc-close span:visited, .rc-overlay .rc-overlay-top a.rc-close span:active span {
+      text-decoration: none;
+      color: rgba(242, 242, 235, 0.7); }
+
+  .rc-overlay .rc-overlay-box .rc-details {
+    margin: 15px auto 30px auto; }
+
+  .rc-overlay .rc-overlay-box .rc-details h3.title {
+    text-align: center;
+    height: 35px;
+    font-size: 2.2em; } }
 /* Extra Small Devices, Phones */
 @media only screen and (min-width: 480px) {
   .text-center-xs {
@@ -13,7 +44,25 @@
   header.header .row .bottom-align {
     display: block;
     vertical-align: none;
-    float: none; } }
+    float: none; }
+
+  .rc-overlay .rc-overlay-box {
+    position: relative; }
+
+  .rc-overlay .rc-overlay-top a.rc-close span {
+    z-index: 1001;
+    position: relative;
+    top: -30px;
+    right: 0;
+    float: right;
+    font-size: 2em;
+    line-height: 20px;
+    text-align: center;
+    color: rgba(242, 242, 235, 0.7);
+    border: 0; }
+    .rc-overlay .rc-overlay-top a.rc-close span:link, .rc-overlay .rc-overlay-top a.rc-close span:hover, .rc-overlay .rc-overlay-top a.rc-close span:visited, .rc-overlay .rc-overlay-top a.rc-close span:active span {
+      text-decoration: none;
+      color: rgba(242, 242, 235, 0.7); } }
 /* Small Devices, Tablets */
 @media only screen and (min-width: 768px) {
   /* ********** Gallery ********** */

@@ -9,3 +9,4 @@ routes.php
 config/database.php
 config/services.php
 resources/views/pages/gallery2.blade.php
+resources/views/pages/gallery3.blade.php
