@@ -10,7 +10,7 @@ $trans_off_white: rgba(242,242,235,0.7);
 @mixin gradient {
   @for $i from 1 through 7 {
     &:nth-child(#{$i}) {
-      background-color: darken(#b0b0b0, $i * 4%);
+      background-color: darken(#b0b0b0, $i * 2%);
     }
   }
 }
@@ -306,6 +306,20 @@ header.header {
 }
 .frontpage-image {
     padding: 5px;
+}
+
+.info {
+    width: 40%;
+    margin: 0 20px;
+    padding: 10px;
+    /* background-color: #ccc; */
+    h2.info-text {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 1em;
+        font-weight: 400;
+        color: #333;
+        text-align: justify;
+    }
 }
 
 /* ******************************* */
