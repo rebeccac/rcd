@@ -15,9 +15,9 @@
 			</div>
 		</div>
 	</div>
-	
-	<div class="frontpage-gallery hidden-xs">
 
+	<div class="frontpage-gallery hidden-xs">
+		<div class="frontpage-hidden-xs-images">
 			<div class="col-sm-12">
 				<div class="row row-no-padding">
 

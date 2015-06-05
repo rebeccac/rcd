@@ -10,7 +10,7 @@ $trans_off_white: rgba(242,242,235,0.7);
 @mixin gradient {
   @for $i from 1 through 7 {
     &:nth-child(#{$i}) {
-      background-color: darken($slate, $i * 4%);
+      background-color: darken(#b0b0b0, $i * 4%);
     }
   }
 }
@@ -300,6 +300,9 @@ header.header {
 .images {
     position: relative;
     top: 30px;
+}
+.frontpage-hidden-xs-images { // visible on sm, md, lg, xl
+    margin-top: 25px;
 }
 .frontpage-image {
     padding: 5px;
