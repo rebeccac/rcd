@@ -1,9 +1,14 @@
 <?php namespace App\Http\Controllers;
+use App\Helper;
+// include(app_path().'/Helper.php');
+
 use App\Http\Requests\ContactFormRequest;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 use App\models\Photo;
 use App\models\Image;
+
+
 use Input;
 use Eloquent; // ******** This Line *********
 use DB;
@@ -19,7 +24,12 @@ class PageController extends Controller {
 	public function index()
 	{
 		$images = Image::all()->take(4);
-		return view('pages.index', ['images'=>$images]);
+
+		$about = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+
+		$info = \App\Helper::truncate_paragraph($about, 330, "/about");
+
+		return view('pages.index', ['images'=>$images, 'info' => $info]);
 	}
 
 	public function create()

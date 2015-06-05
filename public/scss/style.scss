@@ -312,13 +312,18 @@ header.header {
     width: 40%;
     margin: 0 20px;
     padding: 10px;
-    /* background-color: #ccc; */
     h2.info-text {
         font-family: 'Open Sans', sans-serif;
         font-size: 1em;
         font-weight: 400;
-        color: #333;
         text-align: justify;
+        a:link, a:hover, a:active, a:visited {
+            color: #333;
+            text-decoration: none;
+        }
+        a:link.red, a:hover.red, a:active.red, a:visited.red {
+            color: darken($slate, 30%);
+        }
     }
 }
 

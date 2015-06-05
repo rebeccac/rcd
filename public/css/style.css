@@ -240,14 +240,17 @@ header.header {
 .info {
   width: 40%;
   margin: 0 20px;
-  padding: 10px;
-  /* background-color: #ccc; */ }
+  padding: 10px; }
   .info h2.info-text {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     font-weight: 400;
-    color: #333;
     text-align: justify; }
+    .info h2.info-text a:link, .info h2.info-text a:hover, .info h2.info-text a:active, .info h2.info-text a:visited {
+      color: #333;
+      text-decoration: none; }
+    .info h2.info-text a:link.red, .info h2.info-text a:hover.red, .info h2.info-text a:active.red, .info h2.info-text a:visited.red {
+      color: #3e6065; }
 
 /* ******************************* */
 /* ********** Contact Page ********** */
