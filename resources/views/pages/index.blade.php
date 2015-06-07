@@ -32,7 +32,8 @@
 	</div>
 	<div class="clear"></div>
 	<section class="info">
-		<h2 class="info-text"><?php echo $info; ?></h2>
+		<h2 class="info-text hidden-xs"><?php echo $info_330; ?></h2>
+		<h2 class="info-text visible-xs-block"><?php echo $info_120; ?></h2>
 	</section>
 </div><!-- content -->
 @endsection
