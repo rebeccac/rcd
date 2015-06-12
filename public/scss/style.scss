@@ -698,3 +698,50 @@ li.edit-image {
 }
 
 /* ******************************************** */
+
+
+
+
+.widget {
+    margin-top: 100px;
+    width: 400px;
+    height: 220px;
+    border: 1px solid #ccc;
+    content: '';
+    .widget_left {
+        float: left;
+        width: 100px;
+        min-height: 100%;
+        height: 100%;
+        background-color: #eb6d20;
+        .widget_price {
+            width: 100%;
+            margin-top: 20%;
+            font-family: 'Helvetica', sans-serif;
+            color: #fff;
+            font-size: 1.7em;
+            text-align: center;
+        }
+        .widget_store_link {
+            width: 100%;
+            position: relative;
+            bottom: -50%;
+            font-family: 'Helvetica', sans-serif;
+            color: #fff;
+            font-size: 1em;
+            text-align: center;
+            line-height: 1em;
+            a:link, a:hover, a:active, a:visited {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+    .widget_right {
+        float: right;
+        width: 300px;
+        min-height: 100%;
+        height: 100%;
+        background-color: #fff;
+    }
+}

@@ -18,6 +18,7 @@ Route::get('/', 'PageController@index');
 Route::get('about', 'PageController@showAbout');
 Route::get('gallery', 'PageController@showGallery');
 Route::get('contact', 'PageController@create');
+Route::get('widget', 'PageController@showWidget');
 
 // Post back to /contact after submitting form
 Route::post('contact',

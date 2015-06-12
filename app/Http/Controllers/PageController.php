@@ -1,5 +1,6 @@
 <?php namespace App\Http\Controllers;
 use App\Helper;
+use App\Etsy;
 // include(app_path().'/Helper.php');
 
 use App\Http\Requests\ContactFormRequest;
@@ -105,5 +106,13 @@ class PageController extends Controller {
 	public function showGallery() {
 		$photos = Photo::paginate(12); // equivalent Photo::all()->paginate(12)
 		return view('pages.gallery', ['images'=>$photos]);
+	}
+
+	public function showWidget() {
+		$item = new Etsy();
+		$listings = $item->getListings();
+		$rand = $item->getRandomElementData($listings);
+
+		return view('pages.widget', ['listings'=>$listings, 'rand'=>$rand]);
 	}
 }
