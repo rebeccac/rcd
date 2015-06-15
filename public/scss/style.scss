@@ -3,6 +3,7 @@ $slate: #87afb5;
 
 $med_grey: #828282;
 $dark_grey: #333333;
+$orange: #eb6d20;
 
 $trans_off_white: rgba(242,242,235,0.7);
 
@@ -48,6 +49,12 @@ h2, h3 {
 
 .red {
     color: #ff0000;
+}
+.orange {
+    color: $orange;
+}
+.dark_grey {
+    color: $dark_grey;
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
@@ -308,11 +315,14 @@ header.header {
     padding: 5px;
 }
 
-.info {
+.about {
     width: 40%;
+    height: 220px;
     margin: 0 20px;
     padding: 10px;
-    h2.info-text {
+    display: inline-block;
+    vertical-align: top;
+    h2.about-text {
         font-family: 'Open Sans', sans-serif;
         font-size: 1em;
         font-weight: 400;
@@ -326,6 +336,11 @@ header.header {
         }
     }
 }
+.etsy-widget {
+    width: 350px;
+    display: inline-block;
+}
+
 
 /* ******************************* */
 
@@ -699,27 +714,27 @@ li.edit-image {
 
 /* ******************************************** */
 
-
-
+/* ********** Etsy Listing Widget ********** */
 
 .widget {
-    margin-top: 100px;
-    width: 400px;
+    margin-top: 30px;
+    width: 300px;
     height: 220px;
     border: 1px solid #ccc;
     content: '';
     .widget_left {
         float: left;
-        width: 100px;
+        width: 75px;
         min-height: 100%;
         height: 100%;
-        background-color: #eb6d20;
+        background-color: $orange;
+        display: inline-block;
         .widget_price {
             width: 100%;
-            margin-top: 20%;
+            margin-top: 30%;
             font-family: 'Helvetica', sans-serif;
             color: #fff;
-            font-size: 1.7em;
+            font-size: 1.5em;
             text-align: center;
         }
         .widget_store_link {
@@ -738,10 +753,30 @@ li.edit-image {
         }
     }
     .widget_right {
-        float: right;
-        width: 300px;
+        width: 223px;
         min-height: 100%;
         height: 100%;
         background-color: #fff;
+        display: inline-block;
+        position: relative;
+        img {
+            position: relative;
+            top: 15px;
+            left: 27px;
+            padding: 5px 0;
+        }
+        .widget_description {
+            width: 100%;
+            font-family: 'Helvetica', sans-serif;
+            font-size: 1em;
+            color: #333;
+            line-height: 0.9em;
+            padding: 7px;
+            position: absolute;
+            bottom: 0;
+            text-align: center;
+        }
     }
 }
+
+/* ***************************************** */

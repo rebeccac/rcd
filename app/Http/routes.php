@@ -19,7 +19,7 @@ Route::get('about', 'PageController@showAbout');
 Route::get('gallery', 'PageController@showGallery');
 Route::get('contact', 'PageController@create');
 Route::get('widget', 'PageController@showWidget');
-
+Route::get('phpinfo', 'PageController@phpInfo');
 // Post back to /contact after submitting form
 Route::post('contact',
   ['as' => 'contact_store', 'uses' => 'PageController@store']);

@@ -60,9 +60,9 @@ class Helper {
     }
 
     // truncate provided text to provided length, to nearest complete word (finds next space), appends (more...) and links to given URL.
-    public static function truncate_paragraph($text, $length, $url) {
+    public static function truncate_paragraph($text, $length, $url, $class) {
         $text = substr( $text, 0, strpos($text, ' ', $length));
-        $url = "<a href='{$url}' class='red'>(more...)</a>";
+        $url = "<a href='{$url}' class='{$class}'>(more...)</a>";
         return "{$text} {$url}";
     }
 }

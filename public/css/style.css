@@ -28,6 +28,12 @@ h2, h3 {
 .red {
   color: #ff0000; }
 
+.orange {
+  color: #eb6d20; }
+
+.dark_grey {
+  color: #333333; }
+
 @media (min-width: 992px) and (max-width: 1199px) {
   .text-left-md {
     text-align: left; } }
@@ -237,20 +243,27 @@ header.header {
 .frontpage-image {
   padding: 5px; }
 
-.info {
+.about {
   width: 40%;
+  height: 220px;
   margin: 0 20px;
-  padding: 10px; }
-  .info h2.info-text {
+  padding: 10px;
+  display: inline-block;
+  vertical-align: top; }
+  .about h2.about-text {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     font-weight: 400;
     text-align: justify; }
-    .info h2.info-text a:link, .info h2.info-text a:hover, .info h2.info-text a:active, .info h2.info-text a:visited {
+    .about h2.about-text a:link, .about h2.about-text a:hover, .about h2.about-text a:active, .about h2.about-text a:visited {
       color: #333;
       text-decoration: none; }
-    .info h2.info-text a:link.red, .info h2.info-text a:hover.red, .info h2.info-text a:active.red, .info h2.info-text a:visited.red {
+    .about h2.about-text a:link.red, .about h2.about-text a:hover.red, .about h2.about-text a:active.red, .about h2.about-text a:visited.red {
       color: #3e6065; }
+
+.etsy-widget {
+  width: 350px;
+  display: inline-block; }
 
 /* ******************************* */
 /* ********** Contact Page ********** */
@@ -564,24 +577,26 @@ li.edit-image {
       float: right; }
 
 /* ******************************************** */
+/* ********** Etsy Listing Widget ********** */
 .widget {
-  margin-top: 100px;
-  width: 400px;
+  margin-top: 30px;
+  width: 300px;
   height: 220px;
   border: 1px solid #ccc;
   content: ''; }
   .widget .widget_left {
     float: left;
-    width: 100px;
+    width: 75px;
     min-height: 100%;
     height: 100%;
-    background-color: #eb6d20; }
+    background-color: #eb6d20;
+    display: inline-block; }
     .widget .widget_left .widget_price {
       width: 100%;
-      margin-top: 20%;
+      margin-top: 30%;
       font-family: 'Helvetica', sans-serif;
       color: #fff;
-      font-size: 1.7em;
+      font-size: 1.5em;
       text-align: center; }
     .widget .widget_left .widget_store_link {
       width: 100%;
@@ -596,10 +611,28 @@ li.edit-image {
         color: #fff;
         text-decoration: none; }
   .widget .widget_right {
-    float: right;
-    width: 300px;
+    width: 223px;
     min-height: 100%;
     height: 100%;
-    background-color: #fff; }
+    background-color: #fff;
+    display: inline-block;
+    position: relative; }
+    .widget .widget_right img {
+      position: relative;
+      top: 15px;
+      left: 27px;
+      padding: 5px 0; }
+    .widget .widget_right .widget_description {
+      width: 100%;
+      font-family: 'Helvetica', sans-serif;
+      font-size: 1em;
+      color: #333;
+      line-height: 0.9em;
+      padding: 7px;
+      position: absolute;
+      bottom: 0;
+      text-align: center; }
+
+/* ***************************************** */
 
 /*# sourceMappingURL=style.css.map */

@@ -28,10 +28,19 @@ class PageController extends Controller {
 
 		$about = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
 
-		$info_330 = \App\Helper::truncate_paragraph($about, 330, "/about");
-		$info_120 = \App\Helper::truncate_paragraph($about, 120, "/about");
+		$info_330 = \App\Helper::truncate_paragraph($about, 330, "/about", "red");
+		$info_120 = \App\Helper::truncate_paragraph($about, 120, "/about", "red");
 
-		return view('pages.index', ['images'=>$images, 'info_330'=>$info_330, 'info_120'=>$info_120]);
+
+		// get data for Etsy widget
+		$item = new Etsy();
+		$listings = $item->getListings();
+		$rand = $item->getRandomElement($listings);
+
+		$description = \App\Helper::truncate_paragraph($listings['results'][$rand]['description'], 120, $listings['results'][$rand]['url'], "dark_grey");
+
+
+		return view('pages.index', ['images'=>$images, 'info_330'=>$info_330, 'info_120'=>$info_120, 'listings'=>$listings, 'rand'=>$rand, 'description'=>$description]);
 	}
 
 	public function create()
@@ -111,8 +120,14 @@ class PageController extends Controller {
 	public function showWidget() {
 		$item = new Etsy();
 		$listings = $item->getListings();
-		$rand = $item->getRandomElementData($listings);
+		$rand = $item->getRandomElement($listings);
 
-		return view('pages.widget', ['listings'=>$listings, 'rand'=>$rand]);
+		$description = \App\Helper::truncate_paragraph($listings['results'][$rand]['description'], 120, $listings['results'][$rand]['url']);
+
+		return view('pages.widget', ['listings'=>$listings, 'rand'=>$rand, 'description'=>$description]);
+	}
+
+	public function phpInfo() {
+		return view('pages.phpinfo');
 	}
 }

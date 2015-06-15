@@ -31,9 +31,14 @@
 		</div>
 	</div>
 	<div class="clear"></div>
-	<section class="info">
-		<h2 class="info-text hidden-xs"><?php echo $info_330; ?></h2>
-		<h2 class="info-text visible-xs-block"><?php echo $info_120; ?></h2>
-	</section>
+	<!-- <section class="info" -->
+		<div class="about">
+			<h2 class="about-text hidden-xs"><?php echo $info_330; ?></h2>
+			<h2 class="about-text visible-xs-block"><?php echo $info_120; ?></h2>
+		</div>
+		<div class="etsy-widget">
+			@include('includes/widget')
+		</div>
+	<!-- </section> -->
 </div><!-- content -->
 @endsection
