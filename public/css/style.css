@@ -25,6 +25,18 @@ html, body {
 h2, h3 {
   font-family: 'Open Sans', sans-serif; }
 
+h2.info-text {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  text-align: justify;
+  padding: 10px; }
+  h2.info-text a:link, h2.info-text a:hover, h2.info-text a:active, h2.info-text a:visited {
+    color: #333;
+    text-decoration: none; }
+  h2.info-text a:link.red, h2.info-text a:hover.red, h2.info-text a:active.red, h2.info-text a:visited.red {
+    color: #3e6065; }
+
 .red {
   color: #ff0000; }
 
@@ -244,26 +256,14 @@ header.header {
   padding: 5px; }
 
 .about {
-  width: 40%;
   height: 220px;
-  margin: 0 20px;
-  padding: 10px;
-  display: inline-block;
   vertical-align: top; }
-  .about h2.about-text {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 1em;
-    font-weight: 400;
-    text-align: justify; }
-    .about h2.about-text a:link, .about h2.about-text a:hover, .about h2.about-text a:active, .about h2.about-text a:visited {
-      color: #333;
-      text-decoration: none; }
-    .about h2.about-text a:link.red, .about h2.about-text a:hover.red, .about h2.about-text a:active.red, .about h2.about-text a:visited.red {
-      color: #3e6065; }
 
 .etsy-widget {
-  width: 350px;
-  display: inline-block; }
+  padding-top: 30px; }
+
+.news {
+  content: ''; }
 
 /* ******************************* */
 /* ********** Contact Page ********** */
@@ -582,8 +582,8 @@ li.edit-image {
   margin-top: 30px;
   width: 300px;
   height: 220px;
-  border: 1px solid #ccc;
-  content: ''; }
+  content: '';
+  margin: 0 auto; }
   .widget .widget_left {
     float: left;
     width: 75px;
@@ -591,13 +591,18 @@ li.edit-image {
     height: 100%;
     background-color: #eb6d20;
     display: inline-block; }
-    .widget .widget_left .widget_price {
+    .widget .widget_left .widget_price,
+    .widget .widget_left .widget_currency {
       width: 100%;
-      margin-top: 30%;
       font-family: 'Helvetica', sans-serif;
       color: #fff;
+      text-align: center;
+      line-height: 1em; }
+    .widget .widget_left .widget_price {
       font-size: 1.5em;
-      text-align: center; }
+      margin-top: 30%; }
+    .widget .widget_left .widget_currency {
+      font-size: 1.2em; }
     .widget .widget_left .widget_store_link {
       width: 100%;
       position: relative;
@@ -625,7 +630,7 @@ li.edit-image {
     .widget .widget_right .widget_description {
       width: 100%;
       font-family: 'Helvetica', sans-serif;
-      font-size: 1em;
+      font-size: 0.9em;
       color: #333;
       line-height: 0.9em;
       padding: 7px;

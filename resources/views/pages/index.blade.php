@@ -31,14 +31,17 @@
 		</div>
 	</div>
 	<div class="clear"></div>
-	<!-- <section class="info" -->
-		<div class="about">
-			<h2 class="about-text hidden-xs"><?php echo $info_330; ?></h2>
-			<h2 class="about-text visible-xs-block"><?php echo $info_120; ?></h2>
+	<div class="row row-no-padding">
+		<div class="about col-sm-4">
+			<h2 class="info-text hidden-xs"><?php echo $info_330; ?></h2>
+			<h2 class="info-text visible-xs-block"><?php echo $info_120; ?></h2>
 		</div>
-		<div class="etsy-widget">
+		<div class="news col-sm-4">
+			<h2 class="info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+		</div>
+		<div class="etsy-widget col-sm-4">
 			@include('includes/widget')
 		</div>
-	<!-- </section> -->
+	</div><!-- row -->
 </div><!-- content -->
 @endsection

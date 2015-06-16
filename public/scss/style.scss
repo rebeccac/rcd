@@ -47,6 +47,20 @@ h2, h3 {
     font-family: 'Open Sans', sans-serif;
 }
 
+h2.info-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    text-align: justify;
+    padding: 10px;
+    a:link, a:hover, a:active, a:visited {
+        color: #333;
+        text-decoration: none;
+    }
+    a:link.red, a:hover.red, a:active.red, a:visited.red {
+        color: darken($slate, 30%);
+    }
+}
 .red {
     color: #ff0000;
 }
@@ -56,6 +70,7 @@ h2, h3 {
 .dark_grey {
     color: $dark_grey;
 }
+
 
 @media (min-width: 992px) and (max-width: 1199px) {
     .text-left-md {
@@ -316,29 +331,15 @@ header.header {
 }
 
 .about {
-    width: 40%;
     height: 220px;
-    margin: 0 20px;
-    padding: 10px;
-    display: inline-block;
     vertical-align: top;
-    h2.about-text {
-        font-family: 'Open Sans', sans-serif;
-        font-size: 1em;
-        font-weight: 400;
-        text-align: justify;
-        a:link, a:hover, a:active, a:visited {
-            color: #333;
-            text-decoration: none;
-        }
-        a:link.red, a:hover.red, a:active.red, a:visited.red {
-            color: darken($slate, 30%);
-        }
-    }
+
 }
 .etsy-widget {
-    width: 350px;
-    display: inline-block;
+    padding-top: 30px;
+}
+.news {
+    content: '';
 }
 
 
@@ -720,8 +721,8 @@ li.edit-image {
     margin-top: 30px;
     width: 300px;
     height: 220px;
-    border: 1px solid #ccc;
     content: '';
+    margin: 0 auto;
     .widget_left {
         float: left;
         width: 75px;
@@ -729,13 +730,20 @@ li.edit-image {
         height: 100%;
         background-color: $orange;
         display: inline-block;
-        .widget_price {
+        .widget_price,
+        .widget_currency {
             width: 100%;
-            margin-top: 30%;
             font-family: 'Helvetica', sans-serif;
             color: #fff;
-            font-size: 1.5em;
             text-align: center;
+            line-height: 1em;
+        }
+        .widget_price {
+            font-size: 1.5em;
+            margin-top: 30%;
+        }
+        .widget_currency {
+            font-size: 1.2em;
         }
         .widget_store_link {
             width: 100%;
@@ -768,7 +776,7 @@ li.edit-image {
         .widget_description {
             width: 100%;
             font-family: 'Helvetica', sans-serif;
-            font-size: 1em;
+            font-size: 0.9em;
             color: #333;
             line-height: 0.9em;
             padding: 7px;
