@@ -11,7 +11,7 @@
 
 
 <!-- Fonts -->
-<link href='http://fonts.googleapis.com/css?family=Halant:300,400|Josefin+Slab|Martel:400,300|Marcellus|Open+Sans|Merriweather' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Halant:300,400|Martel:400,300|Lora:400,700|Marcellus|Open+Sans|Merriweather' rel='stylesheet' type='text/css'>
 
 <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->

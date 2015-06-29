@@ -31,17 +31,41 @@
 		</div>
 	</div>
 	<div class="clear"></div>
-	<div class="row row-no-padding">
-		<div class="about col-sm-4">
-			<h2 class="info-text hidden-xs"><?php echo $info_330; ?></h2>
-			<h2 class="info-text visible-xs-block"><?php echo $info_120; ?></h2>
-		</div>
-		<div class="news col-sm-4">
-			<h2 class="info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
-		</div>
-		<div class="etsy-widget col-sm-4">
-			@include('includes/widget')
-		</div>
-	</div><!-- row -->
+	<hr class="divider">
+	<div class="col-sm-12">
+		<div class="row row-no-padding">
+
+			<!-- left column -->
+
+			<div class="left col-sm-4">
+				<div class="card">
+					<h2 class="front-page-subtitle">ABOUT REBECCA CORDINGLEY DESIGNS</h2>
+					<img src="{{asset('images/rebecca.png')}}" alt="Rebecca Cordingley" class="text-wrap-left">
+					<div class="hidden-xs"><p class="card-text<div class="><?php echo $info_500; ?></p></div>
+					<div class="visible-xs-block"><p class="card-text"><?php echo $info_250; ?></p></div>
+				</div><!-- card -->
+				<div class="card">
+					<h2 class="front-page-subtitle">SUBSCRIBE TO MAILING LIST</h2>
+				</div>
+			</div>
+
+
+			<!-- middle column -->
+
+			<div class="middle col-sm-4">
+				<div class="card">
+					<h2 class="info-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h2>
+				</div>
+			</div>
+
+
+			<!-- right column -->
+
+			<div class="right col-sm-4">
+				@include('includes/widget')
+			</div>
+
+		</div><!-- row -->
+	</div>
 </div><!-- content -->
 @endsection

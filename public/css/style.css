@@ -6,7 +6,8 @@
 html, body {
   height: 100%;
   width: 100%;
-  max-width: 100%; }
+  max-width: 100%;
+  background-color: #f0f0f0; }
 
 .dark {
   background-color: #262626;
@@ -21,6 +22,9 @@ html, body {
 
 .inline-block {
   display: inline-block; }
+
+.center-text {
+  text-align: center; }
 
 p {
   font-family: 'Open Sans', sans-serif;
@@ -50,6 +54,13 @@ h2.info-text {
   h2.info-text a:link.red, h2.info-text a:hover.red, h2.info-text a:active.red, h2.info-text a:visited.red {
     color: #3e6065; }
 
+h2.front-page-subtitle {
+  font-family: 'Lora', serif;
+  font-weight: 400;
+  color: #555;
+  display: inline-block;
+  font-size: 1.4em; }
+
 .red {
   color: #ff0000; }
 
@@ -58,6 +69,17 @@ h2.info-text {
 
 .dark_grey {
   color: #333333; }
+
+hr.divider {
+  width: 30%;
+  margin: 25px auto;
+  border: 0;
+  height: 1px;
+  background: #777; }
+
+img.text-wrap-left {
+  float: left;
+  margin: 10px; }
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .text-left-md {
@@ -94,7 +116,7 @@ h2.info-text {
 .content {
   width: 95%;
   max-width: 95%;
-  padding: 0;
+  padding: 100px 0 0 0;
   margin: 0 auto; }
 
 .footer, .push {
@@ -111,14 +133,31 @@ h2.info-text {
   padding-left: 0 !important;
   padding-right: 0 !important; }
 
+.card {
+  height: auto;
+  min-height: 100px;
+  border: 1px solid #ccc;
+  padding: 8px;
+  margin: 10px 5px;
+  background-color: #ffffff;
+  box-sizing: border-box; }
+  .card p.card-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9em;
+    color: #333333; }
+
 /* **************************** */
 /* ********** Header ********** */
 header.header {
   width: 100%;
-  height: 195px;
+  height: 115px;
   content: '';
   margin: 0;
   padding: 0;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  background-color: #f0f0f0;
   /* dropdown menu for phones */
   /* end of dropdown menu for phones */ }
   header.header .heading {
@@ -147,6 +186,7 @@ header.header {
     display: inline-block;
     float: right;
     margin-right: 30px;
+    margin-top: 15px;
     list-style: none;
     z-index: 50;
     position: relative;
@@ -156,7 +196,7 @@ header.header {
       padding: 0 8px; }
       header.header ul.s-m-i li i {
         color: #828282;
-        font-size: 1.7em; }
+        font-size: 1.5em; }
         header.header ul.s-m-i li i:hover {
           color: #87afb5; }
   header.header ul.s-m-i-xs {
@@ -235,7 +275,7 @@ header.header {
     width: 100%;
     height: 40px;
     background-color: #f2f2f2;
-    margin: 0 0 10px 0;
+    margin: 0;
     padding: 0; }
     header.header nav.nav ul.menu {
       list-style: none;
@@ -245,16 +285,22 @@ header.header {
       margin: 0; }
       header.header nav.nav ul.menu li.menu-item {
         line-height: 40px;
-        font-family: 'Open Sans', sans-serif;
-        font-size: 1.1em;
-        padding: 0 20px;
+        font-family: 'Lora', serif;
+        font-size: 1em;
+        padding: 0 15px;
         display: inline-block; }
         header.header nav.nav ul.menu li.menu-item a:link, header.header nav.nav ul.menu li.menu-item a:hover, header.header nav.nav ul.menu li.menu-item a:active, header.header nav.nav ul.menu li.menu-item a:visited {
           color: #333333;
           text-decoration: none; }
         header.header nav.nav ul.menu li.menu-item a:link.active, header.header nav.nav ul.menu li.menu-item a:hover.active, header.header nav.nav ul.menu li.menu-item a:active.active, header.header nav.nav ul.menu li.menu-item a:visited.active {
-          color: #527e84;
-          font-weight: 600; }
+          text-decoration: underline; }
+      header.header nav.nav ul.menu li.title {
+        display: inline-block; }
+        header.header nav.nav ul.menu li.title h1.title {
+          font-family: 'Lora', serif;
+          font-weight: 400;
+          color: #555;
+          display: inline-block; }
 
 /* **************************** */
 /* ********** Front page ********** */
@@ -268,14 +314,11 @@ header.header {
 .frontpage-image {
   padding: 5px; }
 
-.about {
+.left {
   height: 220px;
   vertical-align: top; }
 
-.etsy-widget {
-  padding-top: 30px; }
-
-.news {
+.middle {
   content: ''; }
 
 /* ******************************* */
@@ -532,7 +575,6 @@ form {
   margin: 10px auto;
   width: 300px;
   text-align: center;
-  /* background-color: red; */
   position: relative;
   display: block; }
   .page-nav .pagination {
@@ -591,68 +633,41 @@ li.edit-image {
 
 /* ******************************************** */
 /* ********** Etsy Listing Widget ********** */
-.widget {
-  margin-top: 30px;
-  width: 310px;
-  height: 220px;
-  content: '';
-  margin: 0 auto;
-  border-right: 1px solid #eee; }
-  .widget .widget_left {
-    float: left;
-    width: 75px;
-    min-height: 100%;
-    height: 100%;
-    background-color: #eb6d20;
+.card .widget-img img {
+  width: 92%;
+  display: block;
+  margin: auto; }
+.card .widget-description {
+  width: 92%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
+  color: #333333;
+  margin: 20px auto; }
+.card .widget-bottom-row {
+  width: 100%; }
+  .card .widget-bottom-row .widget-bottom-row-left {
+    width: 49%;
+    padding-left: 20px;
     display: inline-block; }
-    .widget .widget_left .widget_price,
-    .widget .widget_left .widget_currency {
-      width: 100%;
-      font-family: 'Helvetica', sans-serif;
-      color: #fff;
-      text-align: center;
-      line-height: 1em; }
-    .widget .widget_left .widget_price {
-      font-size: 1.5em;
-      margin-top: 30%; }
-    .widget .widget_left .widget_currency {
-      font-size: 1.2em; }
-    .widget .widget_left .widget_store_link {
-      width: 100%;
-      position: relative;
-      bottom: -50%;
-      font-family: 'Helvetica', sans-serif;
-      color: #fff;
-      font-size: 1em;
-      text-align: center;
-      line-height: 1em; }
-      .widget .widget_left .widget_store_link a:link, .widget .widget_left .widget_store_link a:hover, .widget .widget_left .widget_store_link a:active, .widget .widget_left .widget_store_link a:visited {
-        color: #fff;
-        text-decoration: none; }
-  .widget .widget_right {
-    width: 233px;
-    min-height: 100%;
-    height: 100%;
-    background-color: #fff;
-    display: inline-block;
-    position: relative; }
-    .widget .widget_right img {
-      position: relative;
-      top: 0;
-      left: 32px;
-      padding: 2px 0; }
-    .widget .widget_right .widget_description {
-      width: 100%;
-      font-family: 'Helvetica', sans-serif;
-      font-size: 0.9em;
-      color: #333;
-      line-height: 0.9em;
-      padding: 2px;
+    .card .widget-bottom-row .widget-bottom-row-left h3.widget-view-more {
+      font-family: 'Lora', serif;
+      font-weight: 400;
+      color: #555;
+      display: inline-block;
+      font-size: 1.3em;
       text-align: center; }
-    .widget .widget_right .etsy_badge {
-      width: 100%;
-      position: absolute;
-      bottom: 5px; }
+  .card .widget-bottom-row .widget-bottom-row-right {
+    width: 49%;
+    display: inline-block;
+    text-align: right;
+    padding-right: 20px; }
+    .card .widget-bottom-row .widget-bottom-row-right h3.widget-price {
+      font-family: 'Lora', serif;
+      font-weight: 400;
+      color: #555;
+      display: inline-block;
+      font-size: 2em;
+      text-align: right; }
 
 /* ***************************************** */
 
