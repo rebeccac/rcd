@@ -22,6 +22,19 @@ html, body {
 .inline-block {
   display: inline-block; }
 
+p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+  color: #333333; }
+
+p.signature {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.5em;
+  color: #679aa2;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 20px; }
+
 h2, h3 {
   font-family: 'Open Sans', sans-serif; }
 
@@ -580,10 +593,11 @@ li.edit-image {
 /* ********** Etsy Listing Widget ********** */
 .widget {
   margin-top: 30px;
-  width: 300px;
+  width: 310px;
   height: 220px;
   content: '';
-  margin: 0 auto; }
+  margin: 0 auto;
+  border-right: 1px solid #eee; }
   .widget .widget_left {
     float: left;
     width: 75px;
@@ -616,7 +630,7 @@ li.edit-image {
         color: #fff;
         text-decoration: none; }
   .widget .widget_right {
-    width: 223px;
+    width: 233px;
     min-height: 100%;
     height: 100%;
     background-color: #fff;
@@ -624,19 +638,21 @@ li.edit-image {
     position: relative; }
     .widget .widget_right img {
       position: relative;
-      top: 15px;
-      left: 27px;
-      padding: 5px 0; }
+      top: 0;
+      left: 32px;
+      padding: 2px 0; }
     .widget .widget_right .widget_description {
       width: 100%;
       font-family: 'Helvetica', sans-serif;
       font-size: 0.9em;
       color: #333;
       line-height: 0.9em;
-      padding: 7px;
-      position: absolute;
-      bottom: 0;
+      padding: 2px;
       text-align: center; }
+    .widget .widget_right .etsy_badge {
+      width: 100%;
+      position: absolute;
+      bottom: 5px; }
 
 /* ***************************************** */
 
